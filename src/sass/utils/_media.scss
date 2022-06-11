@@ -1,5 +1,5 @@
 @mixin mq($type) {
-  // brakpoints
+  // breakpoints
   $mobile: 480px;
   $tablet: 768px;
   $desktop: 1280px;
@@ -15,6 +15,12 @@
       @content;
     }
   }
+  @if $type == 'tablet-before' {
+    @media screen and (max-width: #{$tablet - 0.02}) {
+      @content;
+    }
+  }
+
   @if $type == 'tablet-only' {
     @media screen and (min-width: $tablet) and (max-width: #{$desktop - 0.02}) {
       @content;
