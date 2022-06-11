@@ -1,0 +1,82 @@
+
+.plan__item {
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+
+    &:hover,
+    &:focus{
+        color: #fff;
+        background-color: $main-color;
+    }
+
+    &:hover .plan__desc::before,
+    &:focus .plan__desc::before{
+        
+        background-color: #fff;
+    }
+    
+
+
+    @include mq(tablet-before) {
+        margin-bottom: 15px;
+    }
+}
+
+.plan__icon {
+    margin-bottom: 20px;
+    fill: currentColor;
+}
+
+.plan__title {
+margin-bottom: 20px;
+
+font-size: 14px;
+line-height: 1.4;
+text-align: center;
+letter-spacing: 0.08em;
+
+color: inherit;
+}
+
+.plan__desc::before{
+    content: '';
+    display: block;
+    position: relative;
+    top:0;
+    left: 50%;
+    margin-bottom: 20px;
+
+    transform: translateX(-50%);
+
+    width: 20px;
+    height: 2px;
+
+    background-color: $main-color;
+
+
+}
+
+.plan__desc {
+position: relative;
+
+font-size: 12px;
+line-height: 1.6;
+
+text-align: center;
+letter-spacing: 0.08em;
+
+color: inherit;
+}
+
+
+// .plan__item:hover,
+// .plan__item:focus{
+//     color:#fff;
+//     background-color: $main-color;
+
+// }
