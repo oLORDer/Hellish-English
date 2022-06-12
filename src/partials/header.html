@@ -1,25 +1,34 @@
 <header>
-  <div class="container">
-    <!-- logo -->
-    <a class="logo link" href="../src/index.html">
-      <svg class="logo__main" width="80" height="20">
-        <use href="./images/sprite.svg#icon-logo"></use>
-      </svg>
-      <span class="logo__text">
-        <span class="logo__accent"> Hellish </span>
-        <span class="logo__color"> english </span>
-      </span>
-    </a>
-
-    <button class="btn-menu" type="button">
-      <svg width="21" height="12">
-        <use class="class1" href="./images/sprite.svg#icon-menu"></use>
-        <use href="./images/sprite.svg#icon-close"></use>
+  <div class="container header-container">
+    <button
+      class="btn-menu"
+      type="button"
+      data-menu-button
+      aria-controls="nav"
+      aria-expanded="false"
+    >
+      <svg width="25" height="18" aria-label="swipe mobile menu">
+        <use class="nav__icon-menu" href="./images/sprite.svg#icon-menu"></use>
+        <use
+          class="nav__icon-close"
+          href="./images/sprite.svg#icon-close"
+        ></use>
       </svg>
     </button>
 
     <!-- site navigations -->
-    <nav class="nav">
+    <nav class="nav" data-menu>
+      <!-- logo -->
+      <a class="logo link" href="../src/index.html">
+        <svg class="logo__main" width="80" height="20">
+          <use href="./images/sprite.svg#icon-logo"></use>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__accent"> Hellish </span>
+          <span class="logo__color"> english </span>
+        </span>
+      </a>
+
       <ul class="nav__list">
         <li class="nav__item">
           <a href="" class="nav__link link">Studying program</a>
