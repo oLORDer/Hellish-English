@@ -4,7 +4,6 @@
   $tablet: 768px;
   $desktop: 1440px;
 
-
   // перевірки по медіазапитам
   @if $type == 'mobile-only' {
     @media screen and (min-width: #{$mobile - 0.02}) {
