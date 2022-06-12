@@ -1,3 +1,21 @@
+.how-we-do__title{
+    @include mq(not-desktop){
+        text-align: center;
+    }
+}
+
+
+.plan{
+    @include mq(tablet){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+    }
+
+    @include mq(desktop){
+        margin: -15px;
+    }
+}
 
 .plan__item {
     padding: 30px 20px;
@@ -6,6 +24,7 @@
     flex-direction: column;
     align-items: center;
 
+    background-color: #FFFFFF;
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
     &:hover,
@@ -21,19 +40,36 @@
     }
     
 
-
     @include mq(tablet-before) {
         margin-bottom: 15px;
     }
+
+    @include mq(tablet){
+    padding: 35px 32px;
+
+    flex-basis: calc((100% - 4 * 10px) / 2);
+    margin: 10px;
+    }
+
+    @include mq(desktop){
+        flex-basis: calc((100% - 30px * 3) / 3);
+        margin: 15px;
+        }
 }
 
 .plan__icon {
     margin-bottom: 20px;
     fill: currentColor;
+
+    @include mq(tablet){
+        margin-bottom: 28px;
+    }
 }
 
 .plan__title {
 margin-bottom: 20px;
+
+width: 240px;
 
 font-size: 14px;
 line-height: 1.4;
@@ -41,6 +77,15 @@ text-align: center;
 letter-spacing: 0.08em;
 
 color: inherit;
+
+@include mq(tablet){
+    width: 270px;
+}
+
+@include mq(desktop){
+    margin-bottom: 15px;
+    font-size: 20px;
+}
 }
 
 .plan__desc::before{
@@ -58,11 +103,16 @@ color: inherit;
 
     background-color: $main-color;
 
+    @include mq(desktop){
+        margin-bottom: 15px;
+    }
 
 }
 
 .plan__desc {
 position: relative;
+
+// width: 240px;
 
 font-size: 12px;
 line-height: 1.6;
@@ -71,6 +121,16 @@ text-align: center;
 letter-spacing: 0.08em;
 
 color: inherit;
+
+@include mq(tablet){
+    // width: 270px;
+    font-size: 14px;
+}
+
+@include mq(desktop){
+font-size: 18px;
+line-height: 1.5;
+}
 }
 
 

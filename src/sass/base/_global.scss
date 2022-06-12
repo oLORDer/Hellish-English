@@ -25,7 +25,21 @@ letter-spacing: 0.08em;
 .container {
   padding: 0 20px;
   margin: 0 auto;
+
+
+@include mq(tablet-before){
   max-width: 480px;
+}
+
+  @include mq(tablet){
+    padding: 0 40px;
+    width: 768px;
+  }
+
+  @include mq(desktop){
+    padding: 0 25px;
+    width: 1366px;
+  }
 }
 
 .c-title{
@@ -35,8 +49,15 @@ line-height: 1.3;
 letter-spacing: 0.03em;
 
 margin-bottom: 30px;
+
+
+  @include mq(tablet){
+    font-size: 26px;
+  }
+
+  @include mq(desktop){
+  font-size: 36px;
+  margin-bottom: 50px;
+  }
 }
 
-svg{
-  fill: $main-color;
-}
