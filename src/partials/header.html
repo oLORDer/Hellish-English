@@ -1,50 +1,78 @@
-<header>
+<header class="header">
   <div class="container header-container">
-    <button
-      class="btn-menu"
-      type="button"
-      data-menu-button
-      aria-controls="nav"
-      aria-expanded="false"
-    >
-      <svg width="25" height="18" aria-label="swipe mobile menu">
-        <use class="nav__icon-menu" href="./images/sprite.svg#icon-menu"></use>
-        <use
-          class="nav__icon-close"
-          href="./images/sprite.svg#icon-close"
-        ></use>
+    <!-- logo desk -->
+    <a class="logo link" href="../src/index.html">
+      <svg class="logo__main">
+        <use href="./images/sprite.svg#icon-logo"></use>
       </svg>
-    </button>
+      <span class="logo__text">
+        <span class="logo__accent"> Hellish </span>
+        <span class="logo__color"> english </span>
+      </span>
+    </a>
 
     <!-- site navigations -->
-    <nav class="nav" data-menu>
-      <!-- logo -->
-      <a class="logo link" href="../src/index.html">
-        <svg class="logo__main" width="80" height="20">
-          <use href="./images/sprite.svg#icon-logo"></use>
-        </svg>
-        <span class="logo__text">
-          <span class="logo__accent"> Hellish </span>
-          <span class="logo__color"> english </span>
+    <div class="menu-container" id="menu-container" data-menu>
+      <div class="menu-wrapper">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link link">Studying program</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link link">about</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link link">training options</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link link">contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn-modal-mob" type="button">
+          consultation by phone
+        </button>
+      </div>
+    </div>
+
+    <div class="btn-wrapper">
+      <button class="btn-modal" type="button">consultation by phone</button>
+
+      <button
+        class="hamburger hamburger--collapse btn-menu"
+        type="button"
+        aria-expanded="false"
+        data-menu-button
+        aria-controls="menu-container"
+        aria-expanded="false"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
         </span>
-      </a>
+      </button>
 
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="" class="nav__link link">Studying program</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">about</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">training options</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">contacts</a>
-        </li>
-      </ul>
-    </nav>
-
-    <button class="btn-modal" type="button">consultation by phone</button>
+      <!-- <button
+        class="btn-menu"
+        type="button"
+        data-menu-button
+        aria-controls="menu-container"
+        aria-expanded="false"
+      >
+        <svg width="40" height="40" aria-label="swipe mobile menu">
+          <use
+            width="40"
+            height="40"
+            class="nav__icon-menu"
+            href="./images/sprite.svg#icon-menu"
+          ></use>
+          <use
+            class="nav__icon-close"
+            href="./images/sprite.svg#icon-close"
+          ></use>
+        </svg>
+      </button> -->
+    </div>
   </div>
 </header>
