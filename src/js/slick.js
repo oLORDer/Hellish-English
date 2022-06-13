@@ -26,7 +26,7 @@ $('.slider__nav').slick({
   arrows: false,
   dots: false,
   centerMode: true,
-  centerPadding: '500px',
+  centerPadding: '400px',
   focusOnSelect: false,
   responsive: [
     {
@@ -45,7 +45,6 @@ $('.slider__nav').slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
-        accessibility: true,
         infinite: true,
         arrows: true,
         centerMode: true,
