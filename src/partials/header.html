@@ -1,24 +1,9 @@
 <header>
   <div class="container header-container">
-    <button
-      class="btn-menu"
-      type="button"
-      data-menu-button
-      aria-controls="nav"
-      aria-expanded="false"
-    >
-      <svg width="25" height="18" aria-label="swipe mobile menu">
-        <use class="nav__icon-menu" href="./images/sprite.svg#icon-menu"></use>
-        <use
-          class="nav__icon-close"
-          href="./images/sprite.svg#icon-close"
-        ></use>
-      </svg>
-    </button>
-
     <!-- site navigations -->
-    <nav class="nav" data-menu>
-      <!-- logo -->
+
+    <div class="nav-mobile">
+      <!-- logo desk -->
       <a class="logo link" href="../src/index.html">
         <svg class="logo__main" width="80" height="20">
           <use href="./images/sprite.svg#icon-logo"></use>
@@ -29,22 +14,63 @@
         </span>
       </a>
 
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="" class="nav__link link">Studying program</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">about</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">training options</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link link">contacts</a>
-        </li>
-      </ul>
-    </nav>
+      <div class="menu-container" id="menu-container" data-menu>
+        <nav class="nav">
+          <!-- logo mob-tab -->
+          <a class="logo logo--mob-tab link" href="../src/index.html">
+            <svg class="logo__main" width="80" height="20">
+              <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
+            <span class="logo__text">
+              <span class="logo__accent"> Hellish </span>
+              <span class="logo__color"> english </span>
+            </span>
+          </a>
 
-    <button class="btn-modal" type="button">consultation by phone</button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__link link">Studying program</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">about</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">training options</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link link">contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn-modal-mob" type="button">
+          consultation by phone
+        </button>
+      </div>
+
+      <button class="btn-modal" type="button">consultation by phone</button>
+
+      <button
+        class="btn-menu"
+        type="button"
+        data-menu-button
+        aria-controls="menu-container"
+        aria-expanded="false"
+      >
+        <svg width="40" height="40" aria-label="swipe mobile menu">
+          <use
+            width="40"
+            height="40"
+            class="nav__icon-menu"
+            href="./images/sprite.svg#icon-menu"
+          ></use>
+          <use
+            class="nav__icon-close"
+            href="./images/sprite.svg#icon-close"
+          ></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
+<script src="./js/menu.js"></script>

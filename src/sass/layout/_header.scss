@@ -1,8 +1,9 @@
-
-.header-container {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
+.header {
+  &-container {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+  }
 }
 
 .logo {
@@ -26,17 +27,22 @@
   &__color {
     color: $bg-main-color;
   }
+
+  @include mq(not-desktop) {
+    // display: none;
+  }
 }
 
 .btn-menu {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: 20px;
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  z-index: 2;
 
   & .nav__icon-close {
     display: none;
@@ -50,15 +56,94 @@
     display: none;
   }
 
-  // @media screen and (min-width: 767px) {
-  //   display: none;
-  // }
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
-// .logo {
-//   display: none;
-//   flex: ;
-// }
+.menu-container {
+  display: flex;
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 
+  @include mq(not-desktop) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 
+    background-color: rgba(17, 21, 24, 0.9);
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+
+      z-index: 1;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    margin-top: 50px;
+  }
+
+  &__link {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-transform: capitalize;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $main-color;
+  }
+
+  &__icon-close {
+    fill: $paragraph-color;
+  }
+}
+
+.btn-modal,
+.btn-modal-mob {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 260px;
+  min-height: 48px;
+  padding: 14px 0;
+  margin-top: 50px;
+
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid $main-color;
+  color: $main-color;
+}
+
+.btn-modal {
+  @include mq(not-desktop) {
+    display: none;
+  }
+}
+
+.btn-modal-mob {
+  @include mq(tablet) {
+    display: none;
+  }
+}
