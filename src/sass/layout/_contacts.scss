@@ -1,174 +1,121 @@
+.contacts {
+  padding: 55px 0;
+  margin: 0 auto;
+  text-align: center;
 
-.contacts{
-    padding: 55px 0;
-    margin:0 auto;
+  &__action-text {
+    display: block;
+    margin: 0 auto;
+    max-width: 480px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 1.3;
     text-align: center;
-    &__action-text{
-         display: block;
-         margin: 0 auto;
-         max-width: 480px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 900;
-        line-height: 1.3;
-        text-align: center;
-        letter-spacing: 0.03em;
-        margin-bottom: 25px;
-    } 
-    &__action-text--acсent{
-        color:$main-color;
-    }
-    &__text{
-        display: block;
-        margin: 0 auto;
-        max-width: 480px;
-        color:#fff;
-        font-size: 12px;
-        font-weight:600;
-        line-height: 1.25;
-        text-align: center ;
-        letter-spacing: 0.08em;
-        margin-bottom: 43px;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+  }
+  &__action-text--acсent {
+    color: $main-color;
+  }
+  &__text {
+    display: block;
+    margin: 0 auto;
+    max-width: 480px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 43px;
+  }
 
-    }
-
-@media screen and (min-width: 768px) {
+  @include mq(tablet) {
     padding: 60px 0px 68px 0px;
-    &__action-text{
-       font-size: 26px;
-       max-width: 628px;
+    &__action-text {
+      font-size: 26px;
+      max-width: 628px;
     }
-    &__text{
-        font-size: 16px;
-        max-width: 545px;
+    &__text {
+      font-size: 16px;
+      max-width: 545px;
     }
   }
-@media screen and (min-width: 1440px) {
+  @include mq(desktop) {
     padding: 100px 0px 62px 0px;
     max-width: 1680px;
-    &__action-text{
-        font-size: 46px;
-        max-width:980px;
-     }
-     &__text{
-        font-size: 37px;
-        max-width: 1090px;
+    &__action-text {
+      font-size: 46px;
+      max-width: 980px;
+    }
+    &__text {
+      font-size: 37px;
+      max-width: 1090px;
     }
   }
 }
 
 
-// Стили бекграунда
-.contacts{
-    margin: 0 auto;
-    background-image: url('/src/images/contacts/bg-s.png'), linear-gradient(
-        rgba(17, 21, 24, 1),
-        rgba(17, 21, 24, 1))
-        ;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-// Смена фона для ретина
-@media (min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-  .contacts { 
-    background-image: url('/src/images/contacts/bg-s@2x.png'), linear-gradient(
-        rgba(17, 21, 24, 1),
-        rgba(17, 21, 24, 1))
-        ;
-  }
-//  Подмена фона для экрана от 350
-}
-@media (min-width: 350px) {
-    .contacts {  
-        background-image: url('/src/images/contacts/bg-m.png'), linear-gradient(
-            rgba(17, 21, 24, 1),
-            rgba(17, 21, 24, 1))
-            ;
-    }
-  // Смена фона для ретина
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .contacts {
-            background-image: url('/src/images/contacts/bg-m@2x.png'), 
-            linear-gradient(
-                rgba(17, 21, 24, 1),
-                rgba(17, 21, 24, 1))
-                ;
-      }
-    }
-  }
-//   Подмена фона от 768
-  @media (min-width: 768px) {
-    .contacts {
-        max-width: 1680px;  
-        background-image: url('/src/images/contacts/bg-b.png'), 
-        linear-gradient(
-            rgba(17, 21, 24, 1),
-            rgba(17, 21, 24, 1))
-            ;
-    }
-  // Смена фона для ретина
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        .contacts {
-            background-image: url('/src/images/contacts/bg-b@2x.png'), 
-            linear-gradient(
-                rgba(17, 21, 24, 1),
-                rgba(17, 21, 24, 1))
-                ;
-      }
-    }
-  }
 //  Подсветка бордера при неправильной валидации
-  .contacts-form__input:invalid{
-    border-color: red;
-  }
-  .contacts-form__input{
-    display: block;
-    margin:0 auto 20px auto;
-    background-color: inherit;
-    color: #fff;
-    border: 1px solid #fff;
-    padding:15px 28px ;
-    
- 
-@include mq(tablet){
+.contacts-form__input:invalid {
+  border-color: red;
+}
+.contacts-form__input {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: inherit;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 15px 28px;
+
+  @include mq(tablet) {
     width: 390px;
-}
-@include mq(desktop){
-    width: 478px;
-    padding:23px 40px ;
-    margin:0 auto 30px auto;
-}
   }
-  .contacts-form__button{
-    display: block;
-    width: 260px;
-    margin: 50px auto 0 auto;
-    padding-top: 14px;
-    padding-bottom:14px;
-    border: none;
-    background-color:$main-color;
-    color: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    font-size: 12px;
-    line-height:1.3;
-    letter-spacing: 0.08em;
-    
-    @include mq(tablet){
+  @include mq(desktop) {
+    width: 478px;
+    padding: 23px 40px;
+    margin: 0 auto 30px auto;
+  }
+}
+.contacts-form__button {
+  display: block;
+  width: 260px;
+  margin: 50px auto 0 auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  cursor: pointer;
+  border: none;
+  background-color: $main-color;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
     margin: 30px auto 0 auto;
-    }
-    @include mq(desktop){
+  }
+  @include mq(desktop) {
     width: 354px;
     margin: 80px auto 0 auto;
     padding-top: 27px;
-    padding-bottom:27px;
-    }
-  }  
+    padding-bottom: 27px;
+    font-size: 14px;
+    letter-spacing: 0.17em;
+  }
+}
 
+.contacts-form__input::placeholder {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  opacity: 1;
+  @include mq(desktop) {
+    font-size: 24px;
+  }
+}
