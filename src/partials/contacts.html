@@ -1,5 +1,5 @@
 <section class="contacts">
-  <div class="container">
+  <div class="container contacts__container">
     <h2 class="visually-hidden">reviews</h2>
     <strong class="contacts__action-text">
       Registration for a
@@ -19,23 +19,25 @@
           type="text"
           name="user_name"
           placeholder="Name*"
-          maxlength="32"
-          pattern="[A-Za-z]{1,32}"
+          maxlength="10"
+          pattern="[A-Za-z]{1,10}"
           title="Name must contain only letters"
+          aria-label="Write yours name"
         />
       </label>
       <label>
-        <input
-          class="contacts-form__input"
+        <input class="contacts-form__input"
           type="tel"
           name="phone_number"
           placeholder="Phone*"
-          pattern="38[0-9]{10}"
-          title="Not correct number"
+          maxlength="15"
+          pattern="[0-9]{1,14}"
+          title="Please write only digits"
+          aria-label="Write yours phone"
         />
       </label>
 
-      <button class="contacts-form__button" type="submit">
+      <button class="contacts-form__button" type="submit" aria-label="submit form button">
         i want a free lesson
       </button>
     </form>
