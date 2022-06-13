@@ -4,6 +4,7 @@ import 'slick-carousel';
 $('.slider__list').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
+  accessibility: true,
   arrows: true,
   asNavFor: '.slider__nav',
   responsive: [
@@ -44,6 +45,7 @@ $('.slider__nav').slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
+        accessibility: true,
         infinite: true,
         arrows: true,
         centerMode: true,
