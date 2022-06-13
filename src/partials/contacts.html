@@ -22,21 +22,22 @@
           maxlength="10"
           pattern="[A-Za-z]{1,10}"
           title="Name must contain only letters"
+          aria-label="Write yours name"
         />
       </label>
       <label>
-        <input
-          class="contacts-form__input"
+        <input class="contacts-form__input" aria-label="Write yours phone"
           type="tel"
           name="phone_number"
           placeholder="Phone*"
-          maxlength="10"
-          pattern="38[0-9]{1,10}"
+          maxlength="15"
+          pattern="[0-9]{1,14}"
           title="Please write only digits"
+          aria-label="Write yours phone"
         />
       </label>
 
-      <button class="contacts-form__button" type="submit">
+      <button class="contacts-form__button" type="submit" aria-label="submit form button">
         i want a free lesson
       </button>
     </form>
