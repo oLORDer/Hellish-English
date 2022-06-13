@@ -1,5 +1,5 @@
 <section class="contacts">
-  <div class="container">
+  <div class="container contacts__container">
     <h2 class="visually-hidden">reviews</h2>
     <strong class="contacts__action-text">
       Registration for a
@@ -19,8 +19,8 @@
           type="text"
           name="user_name"
           placeholder="Name*"
-          maxlength="32"
-          pattern="[A-Za-z]{1,32}"
+          maxlength="10"
+          pattern="[A-Za-z]{1,10}"
           title="Name must contain only letters"
         />
       </label>
@@ -30,8 +30,9 @@
           type="tel"
           name="phone_number"
           placeholder="Phone*"
-          pattern="38[0-9]{10}"
-          title="Not correct number"
+          maxlength="10"
+          pattern="38[0-9]{1,10}"
+          title="Please write only digits"
         />
       </label>
 
