@@ -66,10 +66,15 @@
 
 /* Main card container */
 .card-container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
   @include mq(desktop) {
     width: 1258px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 130px;
+      padding-bottom: 130px;
     position: relative;
   }
 }

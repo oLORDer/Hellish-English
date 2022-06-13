@@ -25,11 +25,10 @@ $('.slider__nav').slick({
   asNavFor: '.slider__list',
   arrows: false,
   centerMode: true,
-  centerPadding: '400px',
-  focusOnSelect: false,
+  centerPadding: '350px',
   responsive: [
     {
-      breakpoint: 1339.98,
+      breakpoint: 1439.98,
       settings: {
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -46,7 +45,7 @@ $('.slider__nav').slick({
         slidesToScroll: 1,
         infinite: true,
         arrows: true,
-        dots: true,
+        dots: false,
         centerMode: true,
         centerPadding: '15px',
       },
