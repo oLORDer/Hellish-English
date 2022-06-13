@@ -29,7 +29,7 @@ $('.slider__nav').slick({
   focusOnSelect: false,
   responsive: [
     {
-      breakpoint: 1679.98,
+      breakpoint: 1339.98,
       settings: {
         slidesToShow: 7,
         slidesToScroll: 1,
