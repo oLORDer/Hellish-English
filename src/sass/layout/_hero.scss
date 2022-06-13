@@ -1,0 +1,153 @@
+.hero {
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: $bg-main-color;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0.08em;
+  }
+
+  &__text--grey {
+    font-weight: 500;
+    color: #b9b9b9;
+  }
+
+  &__text--direction {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text--black {
+    color: #111518;
+  }
+
+  &__text--accent {
+    color: $main-color;
+  }
+
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    padding: 14px 0;
+    width: 260px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: $main-color;
+    border: none;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    margin-top: 54px;
+  }
+
+  @include mq(tablet-only) {
+    &__container {
+      display: flex;
+      padding-top: 70px;
+    }
+
+    &__inner {
+      margin-right: 18px;
+    }
+
+    &__title {
+      max-width: 320px;
+      font-size: 26px;
+    }
+
+    &__text {
+      margin-top: 15px;
+    }
+
+    &__link-wrapper {
+      margin-top: 45px;
+      justify-content: start;
+    }
+
+    &__img {
+      justify-content: center;
+      margin-top: 0;
+      margin-right: -22px;
+    }
+  }
+
+  @include mq(desktop) {
+    &__container {
+      display: flex;
+      padding-top: 30px;
+    }
+
+    &__inner {
+      margin-right: 50px;
+      padding-top: 95px;
+    }
+
+    &__title {
+      max-width: 530px;
+      font-size: 58px;
+      line-height: 1.3;
+    }
+
+    &__text {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    &__text--direction {
+      flex-direction: row;
+    }
+
+    &__text--accent {
+      color: $bg-main-color;
+      margin-left: 7px;
+    }
+
+    &__link-wrapper {
+      margin-top: 45px;
+      margin-right: auto;
+      justify-content: start;
+    }
+
+    &__link {
+      padding: 27px 0;
+      width: 354px;
+      font-size: 14px;
+      line-height: 1.21;
+    }
+
+    &__img {
+      justify-content: center;
+      margin-top: 0;
+      margin-right: -82px;
+    }
+  }
+}
