@@ -1,14 +1,26 @@
 .header {
+  padding-top: 30px;
+
   &-container {
     display: flex;
     align-items: center;
-    padding-top: 30px;
+    justify-content: space-between;
+  }
+
+  @include mq(tablet-only) {
+    padding-top: 40px;
   }
 }
 
 .logo {
   display: flex;
   flex-direction: column;
+  z-index: 3;
+
+  &__main {
+    width: 80px;
+    height: 20px;
+  }
 
   &__text {
     margin-top: 4px;
@@ -28,21 +40,26 @@
     color: $bg-main-color;
   }
 
-  @include mq(not-desktop) {
-    // display: none;
+  @include mq(tablet) {
+    &__main {
+      width: 128;
+      height: 32;
+    }
+
+    &__text {
+      margin-top: 3px;
+      font-size: 8px;
+    }
   }
 }
 
 .btn-menu {
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  z-index: 2;
+  // display: inline-flex;
+  // margin: 0;
+  // padding: 0;
+  // border: none;
+  // background-color: transparent;
+  z-index: 3;
 
   & .nav__icon-close {
     display: none;
@@ -63,10 +80,6 @@
 
 .menu-container {
   display: flex;
-  width: 100%;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   @include mq(not-desktop) {
     display: none;
@@ -75,10 +88,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-
-    padding-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
 
     background-color: rgba(17, 21, 24, 0.9);
 
@@ -91,11 +100,24 @@
   }
 }
 
-.nav {
-  &__list {
-    margin-top: 50px;
+.menu-wrapper {
+  @include mq(tablet-before) {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
+  @include mq(tablet-only) {
+    display: flex;
+    justify-content: center;
+    padding-top: 159px;
+  }
+}
+
+.nav {
   &__link {
     font-weight: 800;
     font-size: 20px;
@@ -113,6 +135,31 @@
   &__icon-close {
     fill: $paragraph-color;
   }
+
+  @include mq(tablet-only) {
+    &__link {
+      font-size: 26px;
+    }
+  }
+
+  @include mq(desktop) {
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__link {
+      padding: 20px 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: $paragraph-color;
+    }
+  }
 }
 
 .btn-modal,
@@ -124,7 +171,6 @@
   width: 260px;
   min-height: 48px;
   padding: 14px 0;
-  margin-top: 50px;
 
   background-color: transparent;
   font-weight: 700;
@@ -134,11 +180,41 @@
   text-transform: uppercase;
   border: 2px solid $main-color;
   color: $main-color;
+  cursor: pointer;
+
+  @include mq(tablet-before) {
+    margin-top: 50px;
+  }
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.21px;
+    letter-spacing: 0.14em;
+  }
+
+  @include mq(desktop) {
+    padding: 27px 0;
+    min-height: 70px;
+    width: 336px;
+
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.14em;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  text-align: center;
 }
 
 .btn-modal {
-  @include mq(not-desktop) {
+  @include mq(tablet-before) {
     display: none;
+  }
+
+  @include mq(not-desktop) {
+    margin-right: 40px;
   }
 }
 

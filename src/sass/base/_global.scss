@@ -9,6 +9,21 @@ a::before {
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  background-image: url(../images/hero/bg-tab-mob.png);
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @include mq(desktop) {
+    background-image: url(../images/hero/bg-desk.png);
+  }
+
+  &.no-scroll,
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
