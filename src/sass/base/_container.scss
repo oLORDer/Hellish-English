@@ -7,20 +7,15 @@
     width: 480px;
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    width: 480px;
-  }
-
   @include mq(tablet) {
     padding-right: 40px;
     padding-left: 40px;
     width: 768px;
   }
-  
+
   @include mq(desktop) {
     padding-right: 26px;
     padding-left: 26px;
     width: 1440px;
   }
 }
-
