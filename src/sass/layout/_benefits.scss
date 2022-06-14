@@ -1,0 +1,87 @@
+.benefits{
+    @include mq(desktop){
+        margin-bottom: 60px;
+    }
+}
+
+
+.general-list {
+  padding: 20px 27px;
+
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+
+  counter-reset: number;
+
+  @include mq(tablet) {
+    padding: 28px 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop) {
+    padding: 67px 113px;
+  }
+}
+
+.general-list__item::before {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  color: $main-color;
+
+  counter-increment: number;
+  content: '—  0' counter(number) ' ';
+
+  @include mq(desktop) {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+
+.general-list__item {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.08em;
+
+  color: $bg-main-color;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @include mq(tablet-only) {
+    width: calc(50% - 45px);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 90px;
+    }
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+
+    width: calc((100% - 80px) / 3);
+
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 40px;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
