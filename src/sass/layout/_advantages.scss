@@ -1,5 +1,6 @@
 .sentence {
   margin: 0 auto;
+  padding-bottom: 70px;
 
   @include mq(tablet-before) {
     width: 215px;
@@ -9,6 +10,12 @@
     display: flex;
     margin-right: 20px;
   }
+
+  @include mq(desktop) {
+    padding-bottom: 130px;
+  }
+
+  
 }
 
 .sentence__item {
