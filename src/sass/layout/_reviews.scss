@@ -30,18 +30,33 @@
 }
 
 .slider__list .slick-arrow.slick-prev {
-  left: 0;
+  left: -15px;
   background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
+
+  @include mq(desktop) {
+      left: 0;
+    }
 }
 
 .slider__list .slick-arrow.slick-next {
-  right: 0;
+  right: -15px;
   background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+
+  @include mq(desktop) {
+      right: 0;
+    }
 }
 
 /* Add custom arrows for Bottom Slider */
 .slider__nav {
   position: relative;
+  width: 182px;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    width: 560px;
+    margin: 0 auto;
+  }
 }
 
 .slider__nav .slick-arrow {
@@ -55,13 +70,20 @@
 }
 
 .slider__nav .slick-arrow.slick-prev {
-  left: 0;
+  left: -40px;
   background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
 }
 
 .slider__nav .slick-arrow.slick-next {
-  right: 0;
+  right: -40px;
   background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+}
+
+/* Mark card selected */
+.slick-current > div > .slider__nav-item > .slider__img > img {
+border-radius: 50%;
+outline-offset: -1px;
+outline: 1px solid ($main-color);
 }
 
 /* Main card container */
@@ -247,10 +269,11 @@
   margin-top: 50px;
 }
 
-.slider__nav-item {
-  display: inline-block;
-  text-align: center;
-}
+// .slider__nav-item {
+//   display: inline-block;
+//   text-align: center;
+//   width: 100px;
+// }
 
 .slider__nav-item img {
   display: inline-block;
