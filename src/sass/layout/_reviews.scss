@@ -89,7 +89,7 @@ outline: 1px solid ($main-color);
 /* Main card container */
 .card-container {
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 
   @include mq(desktop) {
     width: 1258px;
