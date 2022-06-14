@@ -1,6 +1,6 @@
 // Стили бекграунда
 .contacts {
-    background-image: url('/src/images/contacts/bg-s.png'),
+    background-image: url('../images/contacts/bg-s.png'),
       linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,20 +9,20 @@
   // Смена фона для ретина
   @include mq(retina)  {
     .contacts {
-      background-image: url('/src/images/contacts/bg-s@2x.png'),
+      background-image: url('../images/contacts/bg-s@2x.png'),
         linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
     }
     //  Подмена фона для экрана от 350
   }
   @media (min-width: 480px) {
     .contacts {
-      background-image: url('/src/images/contacts/bg-m.png'),
+      background-image: url('../images/contacts/bg-m.png'),
         linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
     }
     // Смена фона для ретина
     @include mq(retina) {
       .contacts {
-        background-image: url('/src/images/contacts/bg-m@2x.png'),
+        background-image: url('../images/contacts/bg-m@2x.png'),
           linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
       }
     }
@@ -31,13 +31,13 @@
   @include mq(tablet) {
     .contacts {
       max-width: 1680px;
-      background-image: url('/src/images/contacts/bg-b.png'),
+      background-image: url('../images/contacts/bg-b.png'),
         linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
     }
     // Смена фона для ретина
     @include mq(retina)  {
       .contacts {
-        background-image: url('/src/images/contacts/bg-b@2x.png'),
+        background-image: url('../images/contacts/bg-b@2x.png'),
           linear-gradient(rgba(17, 21, 24, 1), rgba(17, 21, 24, 1));
       }
     }
