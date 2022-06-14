@@ -1,86 +1,152 @@
-.program {
-  background-color: rgba(17, 21, 24, 1);
-  padding: 50px 0 70px 0;
+.program{
+    background-color: rgba(17, 21, 24, 1);
+    padding: 50px 0 70px 0;
+    @include mq(tablet){
+        padding: 60px 0 137px 0;
+    }
+    @include mq(desktop){
+        padding: 120px 0 326px 0;
+    }
 }
 
-.program__overlay {
-  margin: 0px 40px;
-  position: relative;
+// Общий заголовок
+.program__title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    color: #ffff;
+    margin-bottom: 30px;
+    @include mq(tablet){
+        font-size: 26px;
+        text-align: left;
+        margin-bottom: 52px;
+    }
+    @include mq(desktop){
+        font-size: 46px;
+        margin-bottom: 50px;
+    }
+}
+// Стили сразу для ВСЕХ лишек
+.semestr{
+    @include mq(tablet-before){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
+
+   @include mq(desktop){
+    display: flex;
+    flex-direction: row;
+   }
+}
+// Стили слов семестр 1,2,3..
+.semestr__title{
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight:700;
+    line-height:2.0;
+    text-align: left;
+    color: #ffff;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+
+    @include mq(desktop){
+        font-size: 20px;
+        line-height:1.4;
+        margin-bottom: 25px;
+    }
+}
+// Стили цифры в заголовках семестр для десктопа
+.semestr__title--digital{
+    @include mq(desktop){
+        font-size: 30;
+        line-height:1.07;       
+    }
 }
 
-.program__title {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 130%;
+.semestr-ul-2{
+    @include mq(tablet-before){
+        width: 176px;
+    }
+    @include mq(tablet){
+        display: flex;
+        flex-direction: row;
+    }
+    @include mq(desktop){
+        display: flex;
+        flex-direction: column;
+    }
 
-  text-align: center;
-  letter-spacing: 0.03em;
-
-  color: #FFFFFF;
+}
+.semestr-ul-2__item{
+@include mq(tablet-only){
+    &:not(:first-child){
+        margin-left: 50px;
+     }
 }
 
-.semestr__list {
-  margin-left: 35px;
+
+}
+//  Стили заготовков вложенных списков
+.semestr-ul-2__title
+{
+    font-size:12px;
+    font-weight:700;
+    line-height:1.6;
+    text-align: left;
+    color: $main-color;
+    letter-spacing: 0.08em;
+    margin-bottom: 5px;
+    
+    @include mq(desktop){
+        font-size:20px;
+        margin-bottom: 10px;
+    }
+}
+//  Стили текста внутри список
+.semestr-ul-2__text{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0.08em;
+    opacity: 0.5;
+    color:#B9B9B9;
+    margin-bottom: 8px;
+    @include mq(tablet){
+        width: 150px;
+    }
+    @include mq(desktop){
+        font-size:18px;
+        width: 226px;
+    }
 }
 
-.semestr__list:not(:last-child):before {
-  content: "";
-  width: 3px;
-  height: calc(100% + 40px);
-  background-color: #fff;
-  position: absolute;
-  left: 8px;
-    top: 35px;
-  // top: 12px;
-  // left: 20px;
-  // transform: translate(-50%);
+// ящик всего текста
+.semestr__item{
+
+    @include mq(tablet-before){
+        width: 176px;
+        &:not(:last-child){
+            margin-bottom: 40px;
+          }
+    }
+    //   отступ между семестрами
+
+@include mq(tablet-only){
+    &:not(:last-child){
+        margin-bottom: 30px;
+      }
+}
+@include mq(desktop){
+    &:not(:last-child){
+        margin-right: 46px;
+    }
+}
 }
 
-.semestr__title {
-  position: relative;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 28px;
 
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  color: #FFFFFF;
-}
-
-.semestr__span:before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background-color: #FF6B09;
-  border-radius: 50%;
-  position: absolute;
-  top: 8px;
-  left: -20px;
-  transform: translate(-100%);
-}
-
-.semestr-ul-2__title {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 164.9%;
-
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.08em;
-
-  color: #FF6B09;
-}
-
-.semestr-ul-2__text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
-
-  letter-spacing: 0.08em;
-
-  color: #B9B9B9;
-
-  opacity: 0.5;
-}
