@@ -1,0 +1,132 @@
+.problems {
+  padding-top: 25px;
+  padding-bottom: 70px;
+  background: linear-gradient($bg-main-color 79%, #ffffff 79%);
+
+  @include mq(tablet) {
+    padding-top: 55px;
+    background: linear-gradient($bg-main-color 58%, #ffffff 57%);
+  }
+
+  @include mq(desktop) {
+    padding-top: 100px;
+    background-image: url('../images/problems/bg-fire.svg'),
+      linear-gradient($bg-main-color 72%, #ffffff 72%);
+    background-position: 100% 136px, center;
+    background-repeat: no-repeat;
+    background-size: 407px, contain;
+  }
+}
+
+.problems__title {
+  margin-bottom: 25px;
+
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.29;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  @include mq(tablet) {
+    width: 450px;
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+      width: 808px;
+    margin-bottom: 68px;
+
+    font-size: 46px;
+  }
+}
+
+.problems_accent {
+  color: $main-color;
+}
+
+.promlems_enter{
+    @include mq(tablet) {
+        display: block;}
+}
+
+// General classes for 2 sections
+
+.general-list {
+  padding: 20px 27px;
+  background-color: #fff;
+
+  counter-reset: number;
+
+  @include mq(tablet) {
+    padding: 28px 100px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include mq(desktop) {
+    padding: 67px 113px;
+  }
+}
+
+.general-list__item::before {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  color: $main-color;
+
+  counter-increment: number;
+  content: '—  0' counter(number) ' ';
+
+  @include mq(desktop) {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 1.65;
+  }
+}
+
+.general-list__item {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.08em;
+
+  color: $bg-main-color;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  @include mq(tablet-only) {
+    width: calc(50% - 45px);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 90px;
+    }
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+
+    width: calc((100% - 80px) / 3);
+
+    &:not(:nth-child(3n + 3)) {
+      margin-right: 40px;
+    }
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
