@@ -2,52 +2,37 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $('.slider__list').slick({
+  mobileFirst: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  accessibility: true,
-  arrows: true,
+  arrows: false,
   asNavFor: '.slider__nav',
   responsive: [
     {
       breakpoint: 767.98,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: false,
+        arrows: true,
       },
     },
   ],
 });
 $('.slider__nav').slick({
-  slidesToShow: 7,
+  mobileFirst: true,
+  slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: '.slider__list',
-  arrows: false,
-  centerMode: true,
-  centerPadding: '350px',
+  focusOnSelect: true,
+  // arrows: false,
+  // centerMode: true,
+  // centerPadding: '5px',
   responsive: [
-    {
-      breakpoint: 1439.98,
-      settings: {
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: true,
-        centerMode: true,
-        centerPadding: '45px',
-      },
-    },
     {
       breakpoint: 767.98,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
+        slidesToShow: 7,
         arrows: true,
         dots: false,
-        centerMode: true,
-        centerPadding: '15px',
+        // centerPadding: '15px',
       },
     },
   ],
