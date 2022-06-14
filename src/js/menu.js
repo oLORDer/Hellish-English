@@ -2,6 +2,7 @@
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
   const bodyuRef = document.querySelector('body');
+  const logo = document.querySelector('[data-logo]');
 
   menuBtnRef.addEventListener('click', () => {
     const expanded =
@@ -12,5 +13,6 @@
 
     mobileMenuRef.classList.toggle('is-open');
     bodyuRef.classList.toggle('no-scroll');
+    logo.classList.toggle('menu-logo');
   });
 })();
