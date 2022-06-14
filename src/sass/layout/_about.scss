@@ -1,9 +1,5 @@
 .about{
     padding: 70px 20px;
-
-    @include mq(desktop){
-        padding: 130px 180px;
-    }
 }
 
 .about__title{
