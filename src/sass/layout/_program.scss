@@ -47,23 +47,29 @@
 .semestr {
   position: relative;
 
-  // &::after {
-  //     content: '';
-  //     position: absolute;
-  //     width: 137px;
-  //     height: 120px;
-  //     background-image: url(../images/program/bg-m.png);
-  //     background-repeat: no-repeat;
-  //     background-size: cover;
-  //     bottom: -23px;
-  //     left: 183px;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 137px;
+    height: 120px;
+    background-image: url(../images/program/bg-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -93px;
+    right: 0;
 
-  //     @media (min-device-pixel-ratio:2),
-  //       (min-resolution: 192dpi),
-  //       (min-resolution: 2dppx) {
-  //         background-image: url(../images/program/bg-m@2x.png);
-  //       }
-  //   }
+    @media (min-device-pixel-ratio:2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/program/bg-m@2x.png);
+    }
+  }
+
+  @include mq(mobile-only) {
+    &::after {
+        right: -20px;
+      }
+  }
 
   @include mq(tablet-before) {
     display: flex;
@@ -74,11 +80,39 @@
 
   @include mq(tablet-only) {
     margin-left: 35px;
+
+    &::after {
+      width: 374px;
+        height: 273px;
+        right: -30px;
+        background-image: url(../images/program/bg-tablet.png);
+
+        @media (min-device-pixel-ratio:2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+            background-image: url(../images/program/bg-tablet@2x.png);
+          }
+      }
   }
 
   @include mq(desktop) {
     display: flex;
     flex-direction: row;
+    position: none;
+
+    &::after {
+        width: 672px;
+        height: 502px;
+        left: -145px;
+        bottom: -315px;
+        background-image: url(../images/program/bg-desktop.png);
+
+        @media (min-device-pixel-ratio:2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/program/bg-desktop@2x.png);
+        }
+      }
   }
 }
 
@@ -242,6 +276,10 @@
   }
 }
 
-.temporary {
-  z-index: 123;
-}
+// .temporary {
+//   position: absolute;
+//   // width: 120px;
+//   height: 137px;
+//   right: 0;
+//     bottom: -40px;
+// }
