@@ -24,7 +24,6 @@
 
   &__text {
     margin-top: 4px;
-
     font-weight: 700;
     font-size: 5px;
     line-height: 1.2;
@@ -55,11 +54,11 @@
 
 .menu-logo {
   & .logo__main {
-    fill: #ffffff;
+    fill: #FFFFFF;
   }
 
   & .logo__color {
-    color: #ffffff;
+    color: #FFFFFF;
   }
 }
 
@@ -86,21 +85,12 @@
       display: flex;
       flex-direction: column;
       z-index: 2;
-
       transform: scale(1);
       background: rgba(17, 21, 24, 0.9);
       animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
-
-    &.is-hidden {
-      transform: scale(0);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
   }
 }
-
 
 .menu-wrapper {
   transform: scaleY(0.01) scaleX(0);
@@ -123,15 +113,13 @@
 }
 
 .nav {
-
   &__link {
     font-weight: 800;
     font-size: 20px;
     line-height: 1.8;
     letter-spacing: 0.03em;
-    color: #ffffff;
+    color: #FFFFFF;
     text-transform: capitalize;
-
     transition-property: color;
     @extend %transition;
   }
@@ -176,11 +164,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 260px;
   min-height: 48px;
   padding: 14px 0;
-
   background-color: transparent;
   font-weight: 700;
   font-size: 12px;
@@ -195,7 +181,7 @@
 
   &:hover,
   &:focus {
-    color: #ffffff;
+    color: #FFFFFF;
     border-color: transparent;
     background-color: $main-color;
   }
@@ -214,7 +200,6 @@
     padding: 27px 0;
     min-height: 70px;
     width: 336px;
-
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.14em;
