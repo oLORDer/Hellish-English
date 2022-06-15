@@ -1,3 +1,17 @@
+.how-we-do{
+  padding-top: 35px;
+  padding-bottom: 40px;
+
+  @include mq(tablet){
+    padding-bottom: 70px;
+  }
+
+  @include mq(desktop){
+    padding-top: 65px;
+    padding-bottom: 130px;
+  }
+}
+
 .how-we-do__title {
   @include mq(not-desktop) {
     text-align: center;
@@ -37,7 +51,9 @@
   }
 
   @include mq(tablet-before) {
+    &:not(:last-child){
     margin-bottom: 15px;
+    }
   }
 
   @include mq(tablet) {
@@ -120,7 +136,6 @@
   color: inherit;
 
   @include mq(tablet) {
-    // width: 270px;
     font-size: 14px;
   }
 
