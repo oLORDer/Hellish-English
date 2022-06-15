@@ -91,8 +91,16 @@
       background: rgba(17, 21, 24, 0.9);
       animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
+
+    &.is-hidden {
+      transform: scale(0);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
 }
+
 
 .menu-wrapper {
   transform: scaleY(0.01) scaleX(0);
@@ -115,6 +123,7 @@
 }
 
 .nav {
+
   &__link {
     font-weight: 800;
     font-size: 20px;
