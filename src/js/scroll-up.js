@@ -7,6 +7,6 @@ window.onscroll = () => {
         scrollBtn.classList.add('isShowBtn_hide');
     }
 };
-scrollBtn.onlclick = () => {
+scrollBtn.onclick = () => {
     window.scrollTo(0, 0);
 }; 

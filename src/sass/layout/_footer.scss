@@ -140,11 +140,15 @@ transition-property: color;
 }
 #sсrollTop{
     position: fixed;
-    bottom: 150px;
-    right: 70px;
+    bottom: 10px;
+    right: 10px;
     z-index: 99;
     font-size: 40px;
-    color:$main-color;
+    color:#b9b9b9;
+    @include mq(tablet){
+        bottom: 30px;
+        right:30px
+    }
 }
 .isShowBtn{
     opacity: 1;
