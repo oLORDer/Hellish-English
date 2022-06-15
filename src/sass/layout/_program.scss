@@ -1,152 +1,285 @@
-.program{
-    background-color: rgba(17, 21, 24, 1);
-    padding: 50px 0 70px 0;
-    @include mq(tablet){
-        padding: 60px 0 137px 0;
+.program {
+  background-color: rgba(17, 21, 24, 1);
+  padding: 50px 0 70px 0;
+  position: relative;
+
+  @include mq(tablet) {
+    padding: 60px 0 137px 0;
+  }
+
+  @include mq(desktop) {
+    padding: 120px 0 130px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+      top: 252px;
     }
-    @include mq(desktop){
-        padding: 120px 0 326px 0;
-    }
+  }
 }
 
 // Общий заголовок
-.program__title{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 1.3;
-    letter-spacing: 0.03em;
-    color: #ffff;
-    margin-bottom: 30px;
-    @include mq(tablet){
-        font-size: 26px;
-        text-align: left;
-        margin-bottom: 52px;
-    }
-    @include mq(desktop){
-        font-size: 46px;
-        margin-bottom: 50px;
-    }
-}
-// Стили сразу для ВСЕХ лишек
-.semestr{
-    @include mq(tablet-before){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-       }
+.program__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+  color: #ffff;
+  margin-bottom: 30px;
 
-   @include mq(desktop){
+  @include mq(tablet) {
+    font-size: 26px;
+    text-align: left;
+    margin-bottom: 52px;
+  }
+
+  @include mq(desktop) {
+    font-size: 46px;
+    margin-bottom: 105px;
+  }
+}
+
+// Стили сразу для ВСЕХ лишек
+.semestr {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 137px;
+    background-image: url(../images/program/bg-m.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -93px;
+    right: 0;
+
+    @media (min-device-pixel-ratio:2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/program/bg-m@2x.png);
+    }
+  }
+
+  @include mq(mobile-only) {
+    &::after {
+        right: -20px;
+      }
+  }
+
+  @include mq(tablet-before) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq(tablet-only) {
+    margin-left: 35px;
+
+    &::after {
+      width: 374px;
+        height: 273px;
+        right: -30px;
+        background-image: url(../images/program/bg-tablet.png);
+
+        @media (min-device-pixel-ratio:2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+            background-image: url(../images/program/bg-tablet@2x.png);
+          }
+      }
+  }
+
+  @include mq(desktop) {
     display: flex;
     flex-direction: row;
-   }
+    // position: initial;
+
+    &::after {
+        width: 672px;
+        height: 502px;
+        left: -145px;
+        bottom: -315px;
+        background-image: url(../images/program/bg-desktop.png);
+
+        @media (min-device-pixel-ratio:2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/program/bg-desktop@2x.png);
+        }
+      }
+  }
 }
+
 // Стили слов семестр 1,2,3..
-.semestr__title{
-    text-transform: uppercase;
-    font-size:14px;
-    font-weight:700;
-    line-height:2.0;
-    text-align: left;
-    color: #ffff;
-    letter-spacing: 0.08em;
-    margin-bottom: 5px;
+.semestr__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2.0;
+  text-align: left;
+  color: #ffff;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
 
-    @include mq(desktop){
-        font-size: 20px;
-        line-height:1.4;
-        margin-bottom: 25px;
-    }
+  @include mq(desktop) {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+  }
 }
+
 // Стили цифры в заголовках семестр для десктопа
-.semestr__title--digital{
-    @include mq(desktop){
-        font-size: 30;
-        line-height:1.07;       
-    }
-}
+.semestr__title--digital {
 
-.semestr-ul-2{
-    @include mq(tablet-before){
-        width: 176px;
-    }
-    @include mq(tablet){
-        display: flex;
-        flex-direction: row;
-    }
-    @include mq(desktop){
-        display: flex;
-        flex-direction: column;
-    }
-
-}
-.semestr-ul-2__item{
-@include mq(tablet-only){
-    &:not(:first-child){
-        margin-left: 50px;
-     }
-}
+  &::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: ($main-color);
+    top: 7px;
+    left: 0px;
+  }
 
 
+  @include mq(desktop) {
+    font-size: 30;
+    line-height: 1.07;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: ($main-color);
+      top: -40px;
+      left: 0px;
+    }
+  }
 }
+
+.semestr-ul-2 {
+  @include mq(tablet-before) {
+    width: 176px;
+  }
+
+  @include mq(tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.semestr-ul-2__item {
+  @include mq(tablet-only) {
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+  }
+
+
+}
+
 //  Стили заготовков вложенных списков
-.semestr-ul-2__title
-{
-    font-size:12px;
-    font-weight:700;
-    line-height:1.6;
-    text-align: left;
-    color: $main-color;
-    letter-spacing: 0.08em;
-    margin-bottom: 5px;
-    
-    @include mq(desktop){
-        font-size:20px;
-        margin-bottom: 10px;
-    }
+.semestr-ul-2__title {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  color: $main-color;
+  letter-spacing: 0.08em;
+  margin-bottom: 5px;
+
+  @include mq(desktop) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 }
+
 //  Стили текста внутри список
-.semestr-ul-2__text{
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.6;
-    text-align: left;
-    letter-spacing: 0.08em;
-    opacity: 0.5;
-    color:#B9B9B9;
-    margin-bottom: 8px;
-    @include mq(tablet){
-        width: 150px;
-    }
-    @include mq(desktop){
-        font-size:18px;
-        width: 226px;
-    }
+.semestr-ul-2__text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: left;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  color: #B9B9B9;
+  margin-bottom: 8px;
+
+  @include mq(tablet) {
+    width: 150px;
+  }
+
+  @include mq(desktop) {
+    font-size: 18px;
+    width: 226px;
+  }
 }
 
 // ящик всего текста
-.semestr__item{
+.semestr__item {
+  position: relative;
+  padding-left: 32px;
 
-    @include mq(tablet-before){
-        width: 176px;
-        &:not(:last-child){
-            margin-bottom: 40px;
-          }
+  &:not(:last-child):before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: calc(100% + 40px);
+    background-color: #fff;
+    left: 4px;
+    top: 8px;
+  }
+
+  @include mq(tablet-before) {
+    width: 176px;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
-    //   отступ между семестрами
+  }
 
-@include mq(tablet-only){
-    &:not(:last-child){
-        margin-bottom: 30px;
-      }
-}
-@include mq(desktop){
-    &:not(:last-child){
-        margin-right: 46px;
+  //   отступ между семестрами
+
+  @include mq(tablet-only) {
+    padding-left: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
     }
+  }
+
+  @include mq(desktop) {
+    padding-left: 0;
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+
+    &:not(:last-child):before {
+      display: none;
+    }
+  }
 }
-}
 
-
-
+// .temporary {
+//   position: absolute;
+//   // width: 120px;
+//   height: 137px;
+//   right: 0;
+//     bottom: -40px;
+// }
