@@ -32,6 +32,7 @@
 .slider__list .slick-arrow.slick-prev {
   left: -15px;
   background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
 
   @include mq(desktop) {
       left: 0;
@@ -41,6 +42,7 @@
 .slider__list .slick-arrow.slick-next {
   right: -15px;
   background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
 
   @include mq(desktop) {
       right: 0;
@@ -72,11 +74,13 @@
 .slider__nav .slick-arrow.slick-prev {
   left: -40px;
   background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
 }
 
 .slider__nav .slick-arrow.slick-next {
   right: -40px;
   background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
 }
 
 /* Mark card selected */
@@ -88,15 +92,15 @@ outline: 1px solid ($main-color);
 
 /* Main card container */
 .card-container {
-  padding-top: 70px;
+  padding-top: 35px;
   padding-bottom: 60px;
 
   @include mq(desktop) {
     width: 1258px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 130px;
-      padding-bottom: 130px;
+    padding-top: 65px;
+    padding-bottom: 130px;
     position: relative;
   }
 }
@@ -268,12 +272,6 @@ outline: 1px solid ($main-color);
 .slider__nav {
   margin-top: 50px;
 }
-
-// .slider__nav-item {
-//   display: inline-block;
-//   text-align: center;
-//   width: 100px;
-// }
 
 .slider__nav-item img {
   display: inline-block;
