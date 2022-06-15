@@ -1,58 +1,24 @@
-.sentence {
-  margin: 0 auto;
+.advanteges {
   padding-bottom: 70px;
+}
 
-  @include mq(tablet-before) {
-    width: 215px;
-  }
+.advanteges-list {
+  margin: 0 auto;
 
   @include mq(tablet) {
     display: flex;
-    margin-right: 20px;
   }
-
-  @include mq(desktop) {
-    padding-bottom: 130px;
-  }
-
-  
 }
 
-.sentence__item {
+.advanteges-list__item {
   width: 215px;
-
-  @include mq(tablet) {
-    margin-right: 20px;
-  }
-
-  @include mq(desktop) {
-    height: 105px;
-    width: 417px;
-    display: flex;
-    align-items: center;
-  }
-}
-
-.sentence__descr {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.65;
+  margin: 0 auto;
   position: relative;
-  height: 60px;
-  display: flex;
-  align-items: center;
-
-  @include mq(tablet-before) {
-    padding-left: 68px;
-    margin-bottom: 30px;
-  }
-
-  @include mq(tablet) {
-    padding-left: 75px;
-  }
+  background-repeat: no-repeat;
+  background-size: contain;
 
   @include mq(desktop) {
-    font-size: 20px;
+    width: 324px;
   }
 
   &::before {
@@ -63,31 +29,63 @@
     top: 0;
     width: 62px;
     height: 62px;
-    background: url(../images/advantages/group-1.svg);
+    background: url(../images/advantages/group-3.svg);
     background-repeat: no-repeat;
+    background-size: contain;
 
     @include mq(desktop) {
       width: 102px;
       height: 104px;
       top: -23px;
       left: -10px;
+      background: url(../images/advantages/group-3-desk.svg);
+    }
+  }
+
+  &:nth-child(2):before {
+    background: url(../images/advantages/group-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mq(desktop) {
       background: url(../images/advantages/group-1-desk.svg);
     }
   }
 
-  &-2::before {
+  &:nth-child(3):before {
     background: url(../images/advantages/group-2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @include mq(desktop) {
       background: url(../images/advantages/group-2-desk.svg);
     }
   }
 
-  &-3::before {
-    background: url(../images/advantages/group-3.svg);
+  @include mq(tablet-before) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .advanteges-list__descr {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.65;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include mq(tablet-before) {
+      padding-left: 68px;
+    }
+
+    @include mq(tablet) {
+      padding-left: 75px;
+    }
 
     @include mq(desktop) {
-      background: url(../images/advantages/group-3-desk.svg);
+      font-size: 20px;
     }
   }
 }
