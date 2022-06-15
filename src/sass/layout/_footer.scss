@@ -44,7 +44,10 @@ padding-bottom: 30px;
     }
 }
 .footer-phone__icon{
+    fill:$main-color;
     margin-right: 10px;
+    transition-property: fill;
+    @extend %transition;
     @include mq(tablet){
         width: 24px;
         height: 24px;
@@ -78,6 +81,8 @@ font-weight: 500;
 line-height: 1.3;
 letter-spacing: 0.08em;
 text-align: left;
+transition-property: color;
+@extend %transition;
 @include mq(tablet){
     margin-bottom: 0;
     margin-right: 20px;
@@ -88,6 +93,15 @@ text-align: left;
     font-size: 30px;
     line-height: 1.2;
     text-align: center;
+}
+&:hover,&:focus{
+    color:$main-color;
+    
+}
+&:hover .footer-phone__icon,
+&:focus .footer-phone__icon{
+    fill:#000000;
+    
 }
 }
 
@@ -122,5 +136,25 @@ text-align: left;
      }
      @include mq(desktop){
         text-align: left;
+    }
+}
+#sсrollTop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 40px;
+    color:#b9b9b9;
+    @include mq(tablet){
+        bottom: 30px;
+        right:30px
+    }
+}
+.isShowBtn{
+    opacity: 1;
+    transition: 0.4s;
+    
+    &_hide{
+        opacity: 0;
     }
 }

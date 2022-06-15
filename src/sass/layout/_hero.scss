@@ -54,6 +54,8 @@
     color: #ffffff;
     background-color: $main-color;
     border: 2px solid transparent;
+    transition-property: color, border-color, background-color;
+    @extend %transition;
 
     &:hover,
     &:focus {

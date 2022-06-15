@@ -200,9 +200,14 @@
 }
 
 .about__desc-link {
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;
+  text-decoration-line: underline;
 
   color: $main-color;
 

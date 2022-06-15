@@ -41,6 +41,9 @@
 
   color: $bg-main-color;
 
+  transition-property: color, background-color;
+  @extend %transition;
+
   &:hover,
   &:focus {
     color: #fff;

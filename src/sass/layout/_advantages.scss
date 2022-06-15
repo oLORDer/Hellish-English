@@ -1,5 +1,10 @@
 .advanteges {
   padding-bottom: 70px;
+
+  @include mq(desktop) {
+    padding-top: 70px;
+    padding-bottom: 130px;
+  }
 }
 
 .advanteges-list {
@@ -7,6 +12,7 @@
 
   @include mq(tablet) {
     display: flex;
+    padding-left: 10px;
   }
 }
 
@@ -19,6 +25,10 @@
 
   @include mq(desktop) {
     width: 324px;
+    margin-left: 0;
+    &:not(:last-child) {
+      margin-right: 120px;
+    }
   }
 
   &::before {
