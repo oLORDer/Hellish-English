@@ -187,6 +187,13 @@
   color: $main-color;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border-color: transparent;
+    background-color: $main-color;
+  }
+
   @include mq(tablet-before) {
     margin-top: 50px;
   }

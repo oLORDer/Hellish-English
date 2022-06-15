@@ -11,8 +11,7 @@
   transform: scale(1);
 
   transition-property: opacity, visibility;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 
   &.is-hidden {
     transform: scale(0);
@@ -70,8 +69,7 @@
     fill: $paragraph-color;
 
     transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
   }
 
   &__close-btn:hover .modal__close-icon,
@@ -133,8 +131,7 @@
     border: 2px solid $main-color;
 
     transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
   }
 
   &__input:focus,
@@ -154,8 +151,7 @@
     fill: $main-color;
 
     transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
   }
 
   &__textarea {
@@ -172,8 +168,7 @@
     border: 2px solid $main-color;
 
     transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %transition;
   }
 
   &__details {
