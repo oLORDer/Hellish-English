@@ -1,0 +1,254 @@
+.header {
+  padding-top: 30px;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include mq(tablet-only) {
+    padding-top: 40px;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+
+  &__main {
+    width: 80px;
+    height: 20px;
+  }
+
+  &__text {
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 5px;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  &__accent {
+    color: $main-color;
+  }
+
+  &__color {
+    color: $bg-main-color;
+  }
+
+  @include mq(tablet) {
+    &__main {
+      width: 128;
+      height: 32;
+    }
+
+    &__text {
+      margin-top: 3px;
+      font-size: 8px;
+    }
+  }
+}
+
+.menu-logo {
+  & .logo__main {
+    fill: #ffffff;
+  }
+
+  & .logo__color {
+    color: #ffffff;
+  }
+}
+
+.btn-menu {
+  z-index: 3;
+
+  @include mq(desktop) {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: flex;
+
+  @include mq(not-desktop) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      transform: scale(1);
+      background: rgba(17, 21, 24, 0.9);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+  }
+}
+
+.menu-wrapper {
+  @include mq(tablet-before) {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mq(tablet-only) {
+    display: flex;
+    justify-content: center;
+    padding-top: 159px;
+  }
+
+  @include mq(not-desktop) {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+}
+
+.nav {
+  &__link {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition-property: color;
+    @extend %transition;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $main-color;
+  }
+
+  &__icon-close {
+    fill: $paragraph-color;
+  }
+
+  @include mq(tablet-only) {
+    &__link {
+      font-size: 26px;
+    }
+  }
+
+  @include mq(desktop) {
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__link {
+      padding: 20px 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: $paragraph-color;
+    }
+  }
+}
+
+.btn-modal,
+.btn-modal-mob {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  min-height: 48px;
+  padding: 14px 0;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid $main-color;
+  color: $main-color;
+  cursor: pointer;
+  transition-property: color, border-color, background-color;
+  @extend %transition;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border-color: transparent;
+    background-color: $main-color;
+  }
+
+  @include mq(tablet-before) {
+    margin-top: 50px;
+  }
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.21px;
+    letter-spacing: 0.14em;
+  }
+
+  @include mq(desktop) {
+    padding: 27px 0;
+    min-height: 70px;
+    width: 336px;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.14em;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  text-align: center;
+}
+
+.btn-modal {
+  @include mq(tablet-before) {
+    display: none;
+  }
+
+  @include mq(not-desktop) {
+    margin-right: 40px;
+  }
+}
+
+.btn-modal-mob {
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(17, 21, 24, 0.9);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}

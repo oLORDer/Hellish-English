@@ -1,0 +1,160 @@
+.footer{
+    padding-top: 24px;
+
+    @include mq(tablet){
+        padding-top: 50px;
+    }
+    @include mq(desktop){
+        padding-top: 52px;
+    }
+}
+// ящик лого + ящик телефон и иконка
+.footer-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-bottom: 30px;
+@include mq(tablet){
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+@include mq(desktop){
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 50px;
+}
+}
+// ящик телефон+иконка инсты
+.footer-phone-icon__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq(tablet){
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    @include mq(desktop){
+        margin-left: 315px;
+        
+    }
+}
+.footer-phone__icon{
+    fill:$main-color;
+    margin-right: 10px;
+    transition-property: fill;
+    @extend %transition;
+    @include mq(tablet){
+        width: 24px;
+        height: 24px;
+        margin-right: 20px;
+    }
+    @include mq(desktop){
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+    }
+
+}
+// Отступ от лого до телефона
+.footer-logo{
+ margin-bottom: 22px;
+ 
+ @include mq(tablet){
+    margin-bottom: 0;
+    
+}
+
+}
+// Отступ от телефона до инсты
+.footer-item__link{
+display: flex;
+align-items: center;
+margin-bottom: 28px;
+color: rgba(17, 21, 24, 1);
+font-size: 14px;
+font-weight: 500;
+line-height: 1.3;
+letter-spacing: 0.08em;
+text-align: left;
+transition-property: color;
+@extend %transition;
+@include mq(tablet){
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 20px;
+}
+@include mq(desktop){
+    margin-right: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+&:hover,&:focus{
+    color:$main-color;
+    
+}
+&:hover .footer-phone__icon,
+&:focus .footer-phone__icon{
+    fill:#000000;
+    
+}
+}
+
+.instagram__link{
+ @include mq(tablet){
+    padding-left: 20px;
+    border-left: 1px solid #B9B9B9;
+ }
+ @include mq(desktop){
+    padding-left: 26px;
+}
+}
+
+
+
+// All rights reserved-ящик
+.copyright-container{
+    background-color: rgba(17, 21, 24, 1);
+    padding: 20px 0 20px 0;
+
+}
+// All rights reserved стили
+.copyright-text{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+    color:#B9B9B9;
+    @include mq(tablet){
+        text-align: left;
+     }
+     @include mq(desktop){
+        text-align: left;
+    }
+}
+#sсrollTop{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    font-size: 40px;
+    color:#b9b9b9;
+    @include mq(tablet){
+        bottom: 30px;
+        right:30px
+    }
+}
+.isShowBtn{
+    opacity: 1;
+    transition: 0.4s;
+    
+    &_hide{
+        opacity: 0;
+    }
+}

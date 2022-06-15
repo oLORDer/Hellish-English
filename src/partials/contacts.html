@@ -1,0 +1,55 @@
+<section class="contacts" id="contacts">
+  <div class="container">
+    <h2 class="visually-hidden">reviews</h2>
+    <strong class="contacts__action-text">
+      Registration for a
+      <span class="contacts__action-text--acсent">free</span> phone
+      <span class="contacts__action-text--acсent">consultation</span> on the
+      nuances of English UPE
+    </strong>
+    <p class="contacts__text">
+      Leave a request for participation in a
+      <span class="contacts__action-text--acсent">free lesson</span>. A
+      consultant will contact you and answer your questions
+    </p>
+    <form class="contacts-form" id="footer-form">
+      <label class="footer__label">
+        <input
+          class="contacts-form__input"
+          type="text"
+          name="user_name"
+          placeholder="Name*"
+          maxlength="10"
+          pattern="[A-Za-z]{1,10}"
+          title="Name must contain only letters"
+          aria-label="Write yours name"
+        />
+      </label>
+      <label class="footer__label">
+        <input
+          class="contacts-form__input"
+          type="tel"
+          name="phone_number"
+          placeholder="Phone*"
+          maxlength="15"
+          pattern="[0-9]{1,14}"
+          title="Please write only digits"
+          aria-label="Write yours phone"
+        />
+      </label>
+
+      <button
+        id="footer-submit-button"
+        class="contacts-form__button"
+        type="submit"
+        aria-label="submit form button"
+      >
+        i want a free lesson
+      </button>
+    </form>
+    <div class="popup-container is-hidden" id="popup">
+      <h2 class="popup__title">Thank you!<br>For send yours information</h2>
+      <p class="popup__text">We will call you back soon</p>
+    </div>
+  </div>
+</section>

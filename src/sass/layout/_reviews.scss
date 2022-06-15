@@ -1,0 +1,283 @@
+/* SLICK SLIDER SYNCING */
+
+/* Bounding Shell */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Slide feeds */
+.slick-track {
+  display: flex;
+}
+
+/* Add custom arrows for Top Slider */
+.slider__list {
+  position: relative;
+
+  @include mq(desktop) {
+    position: initial;
+  }
+}
+
+.slider__list .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 11;
+  font-size: 0;
+  width: 25px;
+  height: 15px;
+  border: none;
+}
+
+.slider__list .slick-arrow.slick-prev {
+  left: -15px;
+  background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
+
+  @include mq(desktop) {
+      left: 0;
+    }
+}
+
+.slider__list .slick-arrow.slick-next {
+  right: -15px;
+  background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
+
+  @include mq(desktop) {
+      right: 0;
+    }
+}
+
+/* Add custom arrows for Bottom Slider */
+.slider__nav {
+  position: relative;
+  width: 182px;
+  margin: 0 auto;
+
+  @include mq(tablet) {
+    width: 560px;
+    margin: 0 auto;
+  }
+}
+
+.slider__nav .slick-arrow {
+  position: absolute;
+  top: 35%;
+  z-index: 11;
+  font-size: 0;
+  width: 25px;
+  height: 15px;
+  border: none;
+}
+
+.slider__nav .slick-arrow.slick-prev {
+  left: -40px;
+  background: url('../images/arrow-prev.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
+}
+
+.slider__nav .slick-arrow.slick-next {
+  right: -40px;
+  background: url('../images/arrow-next.svg') 0 0 / 100% no-repeat;
+  cursor: pointer;
+}
+
+/* Mark card selected */
+.slick-current > div > .slider__nav-item > .slider__img > img {
+border-radius: 50%;
+outline-offset: -1px;
+outline: 1px solid ($main-color);
+}
+
+/* Main card container */
+.card-container {
+  padding-top: 35px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    width: 1258px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 65px;
+    padding-bottom: 130px;
+    position: relative;
+  }
+}
+
+.slider__list {
+
+  @include mq(tablet) {
+    padding: 40px 40px;
+
+    box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+  }
+
+  @include mq(desktop) {
+    max-width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 110px 50px 80px;
+  }
+}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.slider__overlay {
+  display: block;
+
+  @include mq(tablet) {
+    display: flex;
+  }
+}
+
+.slider__title {
+  margin-bottom: 25px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: ($bg-main-color);
+
+  @include mq(tablet) {
+    font-size: 26px;
+  }
+
+  @include mq(desktop) {
+    font-size: 46px;
+  }
+}
+
+.slider__img {
+  width: 90px;
+  margin-bottom: 18px;
+
+  @include mq(tablet) {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+}
+
+.slider__thumb-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider__thumb-2 {
+  @include mq(tablet) {
+    margin-left: 45px;
+  }
+
+  @include mq(desktop) {
+    margin-left: 40px;
+  }
+}
+
+.slider__name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+
+  text-align: center;
+
+  color: ($main-color);
+
+  @include mq(tablet) {
+    margin-top: 0px;
+
+    text-align: left;
+    font-size: 20px;
+  }
+}
+
+.slider__cv {
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  color: ($paragraph-color);
+
+  @include mq(tablet) {
+    margin-bottom: 20px;
+
+    text-align: left;
+  }
+
+  @include mq(desktop) {
+    width: 480px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.slider__story {
+  font-size: 12px;
+  line-height: 20px;
+
+  text-align: center;
+
+  color: #3D3D3D;
+
+  @include mq(tablet) {
+    text-align: left;
+  }
+
+  @include mq(desktop) {
+    width: 705px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.slider__link {
+  font-size: 12px;
+  line-height: 1.6;
+
+  text-align: center;
+
+  text-decoration: underline;
+
+  color: ($main-color);
+
+  @include mq(tablet) {
+    display: block;
+    text-align: left;
+  }
+}
+
+.slider__nav {
+  margin-top: 50px;
+}
+
+.slider__nav-item img {
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+
