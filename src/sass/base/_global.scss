@@ -11,6 +11,7 @@ a::before {
 }
 
 body {
+  color: $bg-main-color;
   background-image: url(../images/hero/bg-tab-mob.png);
   background-repeat: no-repeat;
   background-position: top;

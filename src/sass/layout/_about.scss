@@ -1,5 +1,12 @@
 .about {
-  padding: 70px 20px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  @include mq(desktop){
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
 }
 
 .about__title {
@@ -52,12 +59,10 @@
   line-height: 1.2;
   letter-spacing: 0.08em;
 
-  color: $bg-main-color;
 
   @include mq(desktop) {
     margin-bottom: 15px;
     font-size: 30px;
-    line-height: 1.2;
   }
 }
 
@@ -130,7 +135,6 @@
   line-height: 1.21;
   letter-spacing: 0.06em;
 
-  color: $bg-main-color;
 
   @include mq(tablet) {
     font-size: 12px;
