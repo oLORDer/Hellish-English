@@ -1,8 +1,6 @@
 .hero {
-  &__container {
-    padding-top: 30px;
-    padding-bottom: 70px;
-  }
+  padding-top: 30px;
+  padding-bottom: 70px;
 
   &__title {
     font-weight: 800;
@@ -60,7 +58,14 @@
     text-transform: uppercase;
     color: #ffffff;
     background-color: $main-color;
-    border: none;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: transparent;
+      border: 2px solid $main-color;
+    }
   }
 
   &__img {
@@ -70,9 +75,10 @@
   }
 
   @include mq(tablet-only) {
+    padding-top: 70px;
+
     &__container {
       display: flex;
-      padding-top: 70px;
     }
 
     &__inner {
@@ -101,9 +107,10 @@
   }
 
   @include mq(desktop) {
+    padding-top: 30px;
+
     &__container {
       display: flex;
-      padding-top: 30px;
     }
 
     &__inner {
