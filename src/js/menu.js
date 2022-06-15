@@ -23,6 +23,11 @@
       mobileMenuRef.classList.toggle('is-open');
       menuBtnRef.classList.toggle('is-active');
       logo.classList.toggle('menu-logo');
+
+      bodyuRef.classList.remove('no-scroll');
+      mobileMenuRef.classList.remove('is-open');
+      menuBtnRef.classList.remove('is-active');
+      logo.classList.remove('menu-logo');
     });
   });
 })();
