@@ -54,11 +54,11 @@
 
 .menu-logo {
   & .logo__main {
-    fill: #FFFFFF;
+    fill: #ffffff;
   }
 
   & .logo__color {
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
@@ -93,9 +93,6 @@
 }
 
 .menu-wrapper {
-  transform: scaleY(0.01) scaleX(0);
-  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-
   @include mq(tablet-before) {
     width: 480px;
     margin-left: auto;
@@ -110,6 +107,11 @@
     justify-content: center;
     padding-top: 159px;
   }
+
+  @include mq(not-desktop) {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
 }
 
 .nav {
@@ -118,7 +120,7 @@
     font-size: 20px;
     line-height: 1.8;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color: #ffffff;
     text-transform: capitalize;
     transition-property: color;
     @extend %transition;
@@ -181,7 +183,7 @@
 
   &:hover,
   &:focus {
-    color: #FFFFFF;
+    color: #ffffff;
     border-color: transparent;
     background-color: $main-color;
   }
