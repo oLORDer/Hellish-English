@@ -39,6 +39,8 @@
 
   box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
 
+  color: $bg-main-color;
+
   &:hover,
   &:focus {
     color: #fff;
@@ -48,6 +50,15 @@
   &:hover .plan__desc::before,
   &:focus .plan__desc::before {
     background-color: #fff;
+  }
+
+
+  &:hover .plan__desc,
+  &:focus .plan__desc,
+  &:hover .plan__title,
+  &:focus .plan__title {
+    color: #fff;
+
   }
 
   @include mq(tablet-before) {
@@ -92,7 +103,7 @@
   text-align: center;
   letter-spacing: 0.08em;
 
-  color: inherit;
+  color: $bg-main-color;
 
   @include mq(tablet) {
     width: 270px;
@@ -133,7 +144,7 @@
   text-align: center;
   letter-spacing: 0.08em;
 
-  color: inherit;
+  color: $paragraph-color;
 
   @include mq(tablet) {
     font-size: 14px;
@@ -144,10 +155,3 @@
     line-height: 1.5;
   }
 }
-
-// .plan__item:hover,
-// .plan__item:focus{
-//     color:#fff;
-//     background-color: $main-color;
-
-// }
