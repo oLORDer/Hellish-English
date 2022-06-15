@@ -36,6 +36,10 @@
     color: $main-color;
   }
 
+  &__color {
+    color: $bg-main-color;
+  }
+
   @include mq(tablet) {
     &__main {
       width: 128;
@@ -62,18 +66,6 @@
 .btn-menu {
   z-index: 3;
 
-  & .nav__icon-close {
-    display: none;
-  }
-
-  &.is-open .nav__icon-close {
-    display: block;
-  }
-
-  &.is-open .nav__icon-menu {
-    display: none;
-  }
-
   @include mq(desktop) {
     display: none;
   }
@@ -90,18 +82,22 @@
     height: 100%;
     width: 100%;
 
-    background-color: rgba(17, 21, 24, 0.9);
-
     &.is-open {
       display: flex;
       flex-direction: column;
-
       z-index: 2;
+
+      transform: scale(1);
+      background: rgba(17, 21, 24, 0.9);
+      animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     }
   }
 }
 
 .menu-wrapper {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
   @include mq(tablet-before) {
     width: 480px;
     margin-left: auto;
@@ -126,6 +122,9 @@
     letter-spacing: 0.03em;
     color: #ffffff;
     text-transform: capitalize;
+
+    transition-property: color;
+    @extend %transition;
   }
 
   &__link:hover,
@@ -182,6 +181,8 @@
   border: 2px solid $main-color;
   color: $main-color;
   cursor: pointer;
+  transition-property: color, border-color, background-color;
+  @extend %transition;
 
   &:hover,
   &:focus {
@@ -229,5 +230,29 @@
 .btn-modal-mob {
   @include mq(tablet) {
     display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(17, 21, 24, 0.9);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
   }
 }
