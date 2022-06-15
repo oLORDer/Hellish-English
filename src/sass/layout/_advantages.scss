@@ -1,6 +1,9 @@
-.sentence {
-  margin: 0 auto;
+.advanteges {
   padding-bottom: 70px;
+}
+
+.advanteges-list {
+  margin: 0 auto;
 
   @include mq(tablet-before) {
     width: 215px;
@@ -14,12 +17,16 @@
   @include mq(desktop) {
     padding-bottom: 130px;
   }
-
-  
 }
 
-.sentence__item {
+.advanteges-list__item {
   width: 215px;
+
+  @include mq(tablet-before) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @include mq(tablet) {
     margin-right: 20px;
@@ -33,7 +40,7 @@
   }
 }
 
-.sentence__descr {
+.advanteges-list__descr {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.65;
@@ -44,7 +51,6 @@
 
   @include mq(tablet-before) {
     padding-left: 68px;
-    margin-bottom: 30px;
   }
 
   @include mq(tablet) {

@@ -1,8 +1,16 @@
 .benefits {
-  background-image: linear-gradient(to bottom, ($bg-main-color)380px, (#fff)250px);
+  background-image: linear-gradient(
+    to bottom,
+    ($bg-main-color) 380px,
+    (#fff) 250px
+  );
 
   @include mq(tablet) {
-    background-image: linear-gradient(to bottom, ($bg-main-color)210px, (#fff)210px);
+    background-image: linear-gradient(
+      to bottom,
+      ($bg-main-color) 210px,
+      (#fff) 210px
+    );
   }
 
   @include mq(desktop) {
@@ -19,7 +27,7 @@
   line-height: 1.35;
   letter-spacing: 0.03em;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   @include mq(tablet) {
     width: 100%;
@@ -30,18 +38,18 @@
     text-align: center;
   }
 
-    @include mq(desktop) {
-      position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;
-    }
+  @include mq(desktop) {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
 }
 
 .general-list {
