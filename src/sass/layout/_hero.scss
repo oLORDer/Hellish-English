@@ -1,15 +1,12 @@
 .hero {
-  &__container {
-    padding-top: 30px;
-    padding-bottom: 70px;
-  }
+  padding-top: 30px;
+  padding-bottom: 70px;
 
   &__title {
     font-weight: 800;
     font-size: 20px;
     line-height: 1.3;
     letter-spacing: 0.03em;
-    color: $bg-main-color;
   }
 
   &__text {
@@ -25,16 +22,12 @@
 
   &__text--grey {
     font-weight: 500;
-    color: #b9b9b9;
+    color: $paragraph-color;
   }
 
   &__text--direction {
     display: flex;
     flex-direction: column;
-  }
-
-  &__text--black {
-    color: #111518;
   }
 
   &__text--accent {
@@ -60,7 +53,14 @@
     text-transform: uppercase;
     color: #ffffff;
     background-color: $main-color;
-    border: none;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:focus {
+      color: $main-color;
+      background-color: transparent;
+      border: 2px solid $main-color;
+    }
   }
 
   &__img {
@@ -70,9 +70,10 @@
   }
 
   @include mq(tablet-only) {
+    padding-top: 70px;
+
     &__container {
       display: flex;
-      padding-top: 70px;
     }
 
     &__inner {
@@ -101,9 +102,10 @@
   }
 
   @include mq(desktop) {
+    padding-top: 30px;
+
     &__container {
       display: flex;
-      padding-top: 30px;
     }
 
     &__inner {

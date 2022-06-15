@@ -36,10 +36,6 @@
     color: $main-color;
   }
 
-  &__color {
-    color: $bg-main-color;
-  }
-
   @include mq(tablet) {
     &__main {
       width: 128;
@@ -186,6 +182,13 @@
   border: 2px solid $main-color;
   color: $main-color;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border-color: transparent;
+    background-color: $main-color;
+  }
 
   @include mq(tablet-before) {
     margin-top: 50px;
