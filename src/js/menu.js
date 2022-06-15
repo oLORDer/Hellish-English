@@ -16,6 +16,7 @@
     bodyuRef.classList.toggle('no-scroll');
     logo.classList.toggle('menu-logo');
   });
+
   menuItem.forEach(link => {
     link.addEventListener('click', () => {
       bodyuRef.classList.toggle('no-scroll');
