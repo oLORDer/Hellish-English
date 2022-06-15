@@ -36,6 +36,10 @@
     color: $main-color;
   }
 
+  &__color {
+    color: $bg-main-color;
+  }
+
   @include mq(tablet) {
     &__main {
       width: 128;
@@ -61,6 +65,10 @@
 
 .btn-menu {
   z-index: 3;
+
+  @include mq(desktop) {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -73,8 +81,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-
-    // background-color: rgba(17, 21, 24, 0.9);
 
     &.is-open {
       display: flex;
@@ -224,5 +230,29 @@
 .btn-modal-mob {
   @include mq(tablet) {
     display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    background: rgba(17, 21, 24, 0.9);
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+
+  100% {
+    transform: scaleY(1) scaleX(1);
   }
 }
