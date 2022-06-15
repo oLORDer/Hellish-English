@@ -2,11 +2,10 @@
   padding-top: 35px;
   padding-bottom: 35px;
 
-  @include mq(desktop){
+  @include mq(desktop) {
     padding-top: 65px;
     padding-bottom: 65px;
   }
-
 }
 
 .about__title {
@@ -58,7 +57,6 @@
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.08em;
-
 
   @include mq(desktop) {
     margin-bottom: 15px;
@@ -135,7 +133,6 @@
   line-height: 1.21;
   letter-spacing: 0.06em;
 
-
   @include mq(tablet) {
     font-size: 12px;
     line-height: 1.25;
@@ -199,8 +196,8 @@
   }
 }
 
-.about__desc-link {
-  padding: 10px;
+.about__desc-btn {
+  padding: 10px 0;
   background-color: #ffffff;
   border: none;
 
@@ -214,5 +211,46 @@
   @include mq(desktop) {
     font-size: 18px;
     line-height: 1.5px;
+  }
+}
+
+.about-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about-modal.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.about-modal__img{
+  width: 280px;
+  height: auto;
+
+  background-repeat: no-repeat;
+
+  @include mq(mobile){
+    min-width: 450px;
+  }
+
+  @include mq(tablet){
+    min-width: 600px;
+  }
+
+  @include mq(desktop){
+    min-width: 700px;
   }
 }
