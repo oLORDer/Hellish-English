@@ -7,7 +7,6 @@
     font-size: 20px;
     line-height: 1.3;
     letter-spacing: 0.03em;
-    color: $bg-main-color;
   }
 
   &__text {
@@ -23,16 +22,12 @@
 
   &__text--grey {
     font-weight: 500;
-    color: #b9b9b9;
+    color: $paragraph-color;
   }
 
   &__text--direction {
     display: flex;
     flex-direction: column;
-  }
-
-  &__text--black {
-    color: #111518;
   }
 
   &__text--accent {

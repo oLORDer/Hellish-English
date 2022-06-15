@@ -36,10 +36,6 @@
     color: $main-color;
   }
 
-  &__color {
-    color: $bg-main-color;
-  }
-
   @include mq(tablet) {
     &__main {
       width: 128;
