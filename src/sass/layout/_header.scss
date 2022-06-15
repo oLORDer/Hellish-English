@@ -93,15 +93,18 @@
     background-color: rgba(17, 21, 24, 0.9);
 
     &.is-open {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
-      z-index: 2;
-    }
+        z-index: 2;
+      }
   }
 }
 
+
 .menu-wrapper {
+
+
   @include mq(tablet-before) {
     width: 480px;
     margin-left: auto;
@@ -119,6 +122,7 @@
 }
 
 .nav {
+  animation: scaleBack .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
   &__link {
     font-weight: 800;
     font-size: 20px;
