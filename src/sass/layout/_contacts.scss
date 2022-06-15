@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   padding: 55px 0;
   margin: 0 auto;
   text-align: center;
@@ -56,23 +57,32 @@
   }
 }
 // Геометрия лейблов формы
-.footer__label{
+.footer__label {
   margin: 0 auto;
   display: block;
-  &:first-child{
+  &:first-child {
     margin-bottom: 20px;
   }
-  @include mq(tablet){
-
+  @include mq(tablet) {
     width: 390px;
   }
-  @include mq(desktop){
-
+  @include mq(desktop) {
     width: 478px;
   }
-
-
 }
+.contacts-form {
+  opacity: 1;
+  visibility: visible;
+  transition: 400ms ease-in;
+
+  &.is-shown {
+    position: fixed;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 //  Подсветка бордера при неправильной валидации
 .contacts-form__input:not(:placeholder-shown):invalid {
   border-color: red;
@@ -88,13 +98,12 @@
   transition-property: border;
   @extend %transition;
 
- @include mq(desktop) {
+  @include mq(desktop) {
     padding: 23px 40px;
     font-size: 20px;
   }
   &:hover,
   &:focus {
-
     border: 1px solid $main-color;
   }
 }
@@ -118,11 +127,11 @@
   transition-property: color, border-color, background-color;
   @extend %transition;
   &:hover,
-    &:focus {
-      color: $main-color;
-      background-color: transparent;
-      border: 2px solid $main-color;
-    }
+  &:focus {
+    color: $main-color;
+    background-color: transparent;
+    border: 2px solid $main-color;
+  }
 
   @include mq(tablet) {
     margin: 30px auto 0 auto;
@@ -146,5 +155,64 @@
   opacity: 1;
   @include mq(desktop) {
     font-size: 20px;
+  }
+}
+
+
+
+
+.popup-container {
+  margin: 0 auto;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  max-width: 688px;
+  opacity: 1;
+  visibility: visible;
+  transition: 400ms ease-in;
+  
+  @include mq(tablet){
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+  @include mq(desktop){
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &.is-hidden {
+    position: fixed;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.popup__title {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+  @include mq(tablet){
+    font-size: 24px;
+  }
+  @include mq(desktop){
+    font-size: 36px;
+  }
+}
+.popup__text{
+  color: $main-color;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  @include mq(tablet){
+    font-size: 24px;
+  }
+  @include mq(desktop){
+    font-size: 36px;
   }
 }
