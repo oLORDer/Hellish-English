@@ -1,8 +1,8 @@
-.guarantee{
+.guarantee {
   padding-top: 35px;
   padding-bottom: 35px;
 
-  @include mq(desktop){
+  @include mq(desktop) {
     padding-top: 65px;
     padding-bottom: 65px;
   }
@@ -68,7 +68,7 @@
   width: 15px;
   height: 20px;
 
-  background-image: url('../images/Guarantee/fire.svg');
+  background-image: url('../images/guarantee/fire.svg');
 }
 
 .guarantee__desc {
