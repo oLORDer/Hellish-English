@@ -1,6 +1,7 @@
 .hero {
   padding-top: 30px;
   padding-bottom: 70px;
+  overflow: hidden;
 
   &__title {
     font-weight: 800;
@@ -71,7 +72,6 @@
     display: flex;
     justify-content: center;
     margin-top: 54px;
-    animation: roll-in-right 1.6s ease-out both;
   }
 
   @include mq(tablet-only) {
@@ -152,7 +152,6 @@
     }
 
     &__img {
-      justify-content: center;
       margin-top: 0;
       margin-right: -82px;
     }
@@ -172,6 +171,7 @@
     opacity: 1;
   }
 }
+
 @keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
@@ -202,6 +202,7 @@
     opacity: 1;
   }
 }
+
 @keyframes tracking-in-expand-fwd-bottom {
   0% {
     letter-spacing: -0.5em;
@@ -218,30 +219,3 @@
     opacity: 1;
   }
 }
-
- @-webkit-keyframes roll-in-right {
-  0% {
-    -webkit-transform: translateX(800px) rotate(540deg);
-            transform: translateX(800px) rotate(540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-            transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-@keyframes roll-in-right {
-  0% {
-    -webkit-transform: translateX(800px) rotate(540deg);
-            transform: translateX(800px) rotate(540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(0deg);
-            transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-
