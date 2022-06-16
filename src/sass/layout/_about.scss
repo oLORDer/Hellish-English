@@ -260,11 +260,7 @@
     }
 
     @include mq(tablet) {
-      min-width: 500px;
-    }
-
-    @include mq(desktop) {
-      min-width: 550px;
+      min-width: 450px;
     }
   }
 }

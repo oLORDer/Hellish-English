@@ -1,12 +1,12 @@
-.how-we-do{
+.how-we-do {
   padding-top: 35px;
   padding-bottom: 40px;
 
-  @include mq(tablet){
+  @include mq(tablet) {
     padding-bottom: 70px;
   }
 
-  @include mq(desktop){
+  @include mq(desktop) {
     padding-top: 65px;
     padding-bottom: 130px;
   }
@@ -55,22 +55,20 @@
     background-color: #fff;
   }
 
-
   &:hover .plan__desc,
   &:focus .plan__desc,
   &:hover .plan__title,
   &:focus .plan__title {
     color: #fff;
-
   }
 
   @include mq(tablet-before) {
-    &:not(:last-child){
-    margin-bottom: 15px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     padding: 35px 32px;
 
     flex-basis: calc((100% - 4 * 10px) / 2);
@@ -78,8 +76,16 @@
   }
 
   @include mq(desktop) {
+    padding-top: 35px;
+    padding-bottom: 55px;
+    padding-left: 28px;
+    padding-right: 28px;
+
     flex-basis: calc((100% - 30px * 3) / 3);
     margin: 15px;
+
+    min-height: 396px;
+    max-width: 418px;
   }
 }
 
@@ -113,8 +119,13 @@
   }
 
   @include mq(desktop) {
+    width: 362px;
     margin-bottom: 15px;
     font-size: 20px;
+
+    &--width {
+      width: 240px;
+    }
   }
 }
 

@@ -17,7 +17,7 @@
 }
 
 .advanteges-list__item {
-  width: 215px;
+  width: 222px;
   margin: 0 auto;
   position: relative;
   background-repeat: no-repeat;
@@ -42,12 +42,22 @@
     background: url(../images/advantages/group-3.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    animation: pulsate-fwd 0.5s ease-in-out infinite both;
+    animation: pulsate-fwd 2000ms ease-in-out infinite both;
+
+    @include mq(tablet-before) {
+      top: -8px;
+      left: 8px;
+    }
+
+    @include mq(tablet-only) {
+      top: -8px;
+      left: 15px;
+    }
 
     @include mq(desktop) {
       width: 102px;
       height: 104px;
-      top: -23px;
+      top: -20px;
       left: -10px;
       background: url(../images/advantages/group-3-desk.svg);
     }
@@ -101,31 +111,32 @@
   }
 }
 
- @-webkit-keyframes pulsate-fwd {
+@-webkit-keyframes pulsate-fwd {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
+
 @keyframes pulsate-fwd {
   0% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   50% {
     -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
   }
   100% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
