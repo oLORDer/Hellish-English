@@ -88,6 +88,11 @@
 border-radius: 50%;
 outline-offset: -1px;
 outline: 1px solid ($main-color);
+
+}
+
+.slider__img{
+  cursor: pointer;
 }
 
 /* Main card container */

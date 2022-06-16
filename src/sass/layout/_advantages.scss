@@ -42,6 +42,7 @@
     background: url(../images/advantages/group-3.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    animation: pulsate-fwd 0.5s ease-in-out infinite both;
 
     @include mq(desktop) {
       width: 102px;
@@ -97,5 +98,34 @@
     @include mq(desktop) {
       font-size: 20px;
     }
+  }
+}
+
+ @-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }

@@ -15,6 +15,7 @@
     <form class="contacts-form" id="footer-form">
       <label class="footer__label">
         <input
+          id="user-name"
           class="contacts-form__input"
           type="text"
           name="user_name"
@@ -23,18 +24,22 @@
           pattern="[A-Za-z]{1,10}"
           title="Name must contain only letters"
           aria-label="Write yours name"
+          required
         />
       </label>
       <label class="footer__label">
         <input
+        id="user-phone"
           class="contacts-form__input"
           type="tel"
           name="phone_number"
           placeholder="Phone*"
           maxlength="15"
           pattern="[0-9]{1,14}"
+          
           title="Please write only digits"
           aria-label="Write yours phone"
+          required
         />
       </label>
 

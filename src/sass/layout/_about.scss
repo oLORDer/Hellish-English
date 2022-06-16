@@ -124,7 +124,7 @@
   width: 18px;
   height: 14px;
 
-  background-image: url('../images/About/done.svg');
+  background-image: url('../images/about/done.svg');
 }
 
 .about__desc-txt {
@@ -207,6 +207,7 @@
   text-decoration-line: underline;
 
   color: $main-color;
+  cursor: pointer;
 
   @include mq(desktop) {
     font-size: 18px;
