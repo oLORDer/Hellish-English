@@ -3,6 +3,11 @@
   top: 7%;
   left: -9%;
 
+  @include mq(tablet-before) {
+    top: 10%;
+    left: 5%;
+  }
+
   @include mq(tablet) {
     top: 14%;
     left: 4%;
@@ -20,6 +25,7 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+
 .plane.main {
   position: absolute;
   top: 0;
@@ -44,6 +50,11 @@
   box-sizing: border-box;
   -webkit-box-shadow: 0 0 60px crimson, inset 0 0 60px crimson;
   box-shadow: 0 0 60px $main-color, inset 0 0 60px rgba(17, 21, 24, 0.9);
+
+  @include mq(mobile-only) {
+    width: 60px;
+    height: 60px;
+  }
 
   @include mq(desktop) {
     width: 170px;
