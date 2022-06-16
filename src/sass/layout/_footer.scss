@@ -145,9 +145,14 @@ transition-property: color;
     z-index: 99;
     font-size: 40px;
     color:#b9b9b9;
+    transition-property: color;
+    @extend %transition;
     @include mq(tablet){
         bottom: 30px;
         right:30px
+    }
+    &:hover, &:focus{
+    color:#6a6666;
     }
 }
 .isShowBtn{
