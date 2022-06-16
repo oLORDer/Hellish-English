@@ -207,6 +207,7 @@
   text-decoration-line: underline;
 
   color: $main-color;
+  cursor: pointer;
 
   @include mq(desktop) {
     font-size: 18px;
